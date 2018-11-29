@@ -9,14 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-    @RequestMapping("/users")
+    @RequestMapping("/hello")
     public @ResponseBody String greeting() {
         return "Hello World";
-    }
-    @GetMapping(path = "/{username}",  produces = {"application/json"})
-    public user setuser(@PathVariable String username) {
-
-        user user = user.setUsername(username);
-        return user;
     }
 }

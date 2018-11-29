@@ -1,8 +1,23 @@
 package com.oocl.web.sampleWebApp;
 
 public class user {
-    public user(String username) {
+    private  static int count = 0;
+
+
+    public user(){
+        this.id = count++;
+    }
+    public user( String username) {
+        this.id = count++;
         this.username = username;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -13,5 +28,6 @@ public class user {
         this.username = username;
     }
 
+    private int id;
     private String username;
 }
